@@ -1,0 +1,33 @@
+POST http://localhost:3000/libros
+Content-Type: application/json
+
+{"titulo": "El Principito", "autor": "Antoine de Saint-Exupéry", "anio": 1943}
+
+###
+POST http://localhost:3000/libros
+Content-Type: application/json
+
+{"titulo": "La bruha", "autor": "Antoine de Saint-Exupéry", "anio": 2011}
+
+###
+
+GET http://localhost:3000/libros
+
+###
+
+PUT http://localhost:3000/libros/2
+Content-Type: application/json
+
+{"titulo": "tituloo", "autor": "Autor"}
+
+###
+
+GET http://localhost:3000/autores
+
+###
+
+GET http://localhost:3000/autores
+
+###
+
+GET http://localhost:3000/libros?orden=desc
