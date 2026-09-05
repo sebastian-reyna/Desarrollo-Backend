@@ -1,0 +1,64 @@
+### ========================
+### ENDPOINTS DE LIBROS
+### ========================
+
+### Obtener todos los libros
+GET http://localhost:3000/libros
+
+### Obtener un libro por ID
+GET http://localhost:3000/libros/4
+
+### Crear un nuevo libro (POST)
+POST http://localhost:3000/libros
+Content-Type: application/json
+
+{
+  "titulo": "Rayuela",
+  "autor": "Julio Cortázar",
+  "anio": 1963
+}
+
+### Actualizar un libro (PUT)
+PUT http://localhost:3000/libros/2
+Content-Type: application/json
+
+{
+  "titulo": "Don Quijote de la Mancha (Edición Revisada)",
+  "autor": "Miguel de Cervantes",
+  "anio": 1615
+}
+
+### Eliminar un libro (DELETE)
+DELETE http://localhost:3000/libros/3
+
+
+### ========================
+### ENDPOINTS DE AUTORES
+### ========================
+
+### Obtener todos los autores
+GET http://localhost:3000/autores
+
+### Obtener un autor por ID
+GET http://localhost:3000/autores/2
+
+### Crear un nuevo autor (POST)
+POST http://localhost:3000/autores
+Content-Type: application/json
+
+{
+  "nombre": "Julio Cortázar",
+  "nacionalidad": "Argentina"
+}
+
+### Actualizar un autor (PUT)
+PUT http://localhost:3000/autores/3
+Content-Type: application/json
+
+{
+  "nombre": "Carlos Ruiz Zafón",
+  "nacionalidad": "Española (Cataluña)"
+}
+
+### Eliminar un autor (DELETE)
+DELETE http://localhost:3000/autores/1
