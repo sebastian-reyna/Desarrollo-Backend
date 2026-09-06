@@ -13,22 +13,8 @@ const libros = [
 const autores = [
   { id: 1, nombre: 'Gabriel García Márquez', nacionalidad: 'Colombiana' },
   { id: 2, nombre: 'Miguel de Cervantes', nacionalidad: 'Española' },
-  { id: 3, nombre: 'Carlos Ruiz Zafón', nacionalidad: 'Española' }
+  { id: 3, nombre: 'Alejandro Ruiz Zafón', nacionalidad: 'Española' }
 ]
-
-app.get("/libros", (req, res) => {
-  const { orden } = req.query;
-
-  let resultado = [...libros];
-
-  if (orden === "asc") {
-    resultado.sort((a, b) => a.titulo.localeCompare(b.titulo));
-  } else if (orden === "desc") {
-    resultado.sort((a, b) => b.titulo.localeCompare(a.titulo));
-  }
-
-  res.json(resultado);
-});
 
 app.get('/libros', (req, res) => {
   const { autor, anio } = req.query
@@ -64,6 +50,20 @@ app.get('/libros/:id', (req, res) => {
     return res.status(404).json({ error: 'Libro no encontrado' })
   }
   res.json(libro)
+})
+
+app.get("/autores", (req, res) => {
+  const { orden } = req.query;
+
+  let resultado = [...autores];
+
+  if (orden === "asc") {
+    resultado.sort((a, b) => a.nombre.localeCompare(b.nombre));
+  } else if (orden === "desc") {
+    resultado.sort((a, b) => b.nombre.localeCompare(a.nombre));
+  }
+
+  res.json(resultado);
 })
 
 app.get('/autores', (req, res) => {

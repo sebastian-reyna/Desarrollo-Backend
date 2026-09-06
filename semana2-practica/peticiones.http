@@ -1,0 +1,40 @@
+HTTP
+### ========================
+### ENDPOINTS DE LIBROS
+### ========================
+
+### Obtener todos los libros
+GET http://localhost:3000/libros
+
+### Filtrar libros por autor y año
+GET http://localhost:3000/libros?autor=Gabriel García Márquez&anio=1967
+
+### Obtener un libro por ID
+GET http://localhost:3000/libros/2
+
+### Crear un nuevo libro (El Principito)
+POST http://localhost:3000/libros
+Content-Type: application/json
+
+{
+  "titulo": "El Principito",
+  "autor": "Antoine de Saint-Exupéry",
+  "anio": 1943
+}
+
+### Eliminar un libro por ID
+DELETE http://localhost:3000/libros/2
+
+
+### ========================
+### ENDPOINTS DE AUTORES
+### ========================
+
+### Obtener todos los autores
+GET http://localhost:3000/autores
+
+### Obtener un autor por ID
+GET http://localhost:3000/autores/3
+
+### Filtrar por orden ascendente
+GET http://localhost:3000/autores?orden=asc
