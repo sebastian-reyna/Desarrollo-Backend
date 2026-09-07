@@ -1,11 +1,11 @@
 {
-  "name": "primera-api",
+  "name": "clase2-teoria",
   "version": "1.0.0",
   "description": "API REST para gestion de eventos",
-  "main": "app.js",
+  "main": "src/app.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "node --watch app.js"
+    "start": "node src/app.js",
+    "dev": "node --watch src/app.js"
   },
   "keywords": [],
   "author": "",
